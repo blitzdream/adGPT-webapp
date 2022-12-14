@@ -92,3 +92,4 @@ const App = () => {
     </Row>
   )
 }
+export default App
