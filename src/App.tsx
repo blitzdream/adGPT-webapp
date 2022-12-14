@@ -81,9 +81,9 @@ const App = () => {
           {generateError && <Alert message={generateError} />}
           <Typography.Title level={1}>GPT Insta Post Generator</Typography.Title>
           <Space direction="vertical" size="large" style={{ width: '100%' }}>
-            <Input value={orgaId} onChange={(e) => setOrgaId(e.target.value)} placeholder="Your OpenAI api key" />
+            <Input value={orgaId} onChange={(e) => setOrgaId(e.target.value)} placeholder="Your organization id" />
             <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Your OpenAI api key" />
-            <Input.TextArea value={userQuery} onChange={(e) => setUserQuery(e.target.value)} />
+            <Input.TextArea placeholder="Type your query..." value={userQuery} onChange={(e) => setUserQuery(e.target.value)} />
             <Button onClick={onGenerate}>Generate</Button>
           </Space>
           {result ? <PostPreview {...result} /> : <div><Typography.Text strong>Make a query to see a post</Typography.Text></div>}
